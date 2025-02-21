@@ -160,6 +160,7 @@ const events = [
     type: "Competition",
     fee: "150/-",
     teamSize: "Upto 5 members",
+    link: "https://forms.gle/KKRJ6XHDW1j1PKLK9",
     cover: "/expo.jpeg",
     prizes: {
       first: "$20000",
@@ -228,11 +229,17 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
               <div className="flex items-center gap-2 text-sm">
                 <Trophy className="h-4 w-4 text-yellow-500" />
                 <div className="flex gap-2">
-                  <span className="prize-text font-bold text-base">{event.prizes.first}</span>
+                  <span className="prize-text font-bold text-base">
+                    {event.prizes.first}
+                  </span>
                   <span className="text-muted-foreground">|</span>
-                  <span className="prize-text font-bold text-base">{event.prizes.second}</span>
+                  <span className="prize-text font-bold text-base">
+                    {event.prizes.second}
+                  </span>
                   <span className="text-muted-foreground">|</span>
-                  <span className="prize-text font-bold text-base">{event.prizes.third}</span>
+                  <span className="prize-text font-bold text-base">
+                    {event.prizes.third}
+                  </span>
                 </div>
               </div>
             )}
@@ -306,27 +313,45 @@ const FeaturedEvent = () => {
               <Trophy className="h-5 w-5 text-yellow-500" />
               <div className="flex gap-3">
                 <div className="flex flex-col items-center">
-                  <span className="text-xs text-muted-foreground">1st Prize</span>
-                  <span className="prize-text font-bold text-xl">{projectExpo.prizes?.first}</span>
+                  <span className="text-xs text-muted-foreground">
+                    1st Prize
+                  </span>
+                  <span className="prize-text font-bold text-xl">
+                    {projectExpo.prizes?.first}
+                  </span>
                 </div>
                 <span className="text-muted-foreground self-end">|</span>
                 <div className="flex flex-col items-center">
-                  <span className="text-xs text-muted-foreground">2nd Prize</span>
-                  <span className="prize-text font-bold text-xl">{projectExpo.prizes?.second}</span>
+                  <span className="text-xs text-muted-foreground">
+                    2nd Prize
+                  </span>
+                  <span className="prize-text font-bold text-xl">
+                    {projectExpo.prizes?.second}
+                  </span>
                 </div>
                 <span className="text-muted-foreground self-end">|</span>
                 <div className="flex flex-col items-center">
-                  <span className="text-xs text-muted-foreground">3rd Prize</span>
-                  <span className="prize-text font-bold text-xl">{projectExpo.prizes?.third}</span>
+                  <span className="text-xs text-muted-foreground">
+                    3rd Prize
+                  </span>
+                  <span className="prize-text font-bold text-xl">
+                    {projectExpo.prizes?.third}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="mt-6">
-            <Button className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground">
-              Register Now
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+            <Button asChild className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground">
+              <a
+                href={projectExpo.link || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Register Now
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -356,7 +381,9 @@ const HelpDesk = () => {
         </div>
         <div className="flex items-center gap-2">
           <Phone className="h-4 w-4 text-muted-foreground" />
-          <span className="text-muted-foreground">Fida: +917306204359</span>
+          <span className="text-muted-foreground">
+            Fida Fathima: +917306204359
+          </span>
         </div>
       </div>
     </div>
