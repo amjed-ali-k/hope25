@@ -13,6 +13,7 @@ const events = [
     fee: "100/-",
     teamSize: "Upto 3 members",
     cover: "/line-follower.jpeg",
+    link: "https://forms.gle/chK4Y4Ctj8tBLGa98",
     prizes: {
       first: "$3000",
       second: "$2000",
@@ -28,6 +29,7 @@ const events = [
     fee: "100/-",
     teamSize: "Individual",
     cover: "/drone.jpeg",
+    link: "https://forms.gle/WjgKvtGFzm4QVA2C6",
     venue: null,
     prizes: null,
   },
@@ -96,6 +98,7 @@ const events = [
     fee: "Free",
     teamSize: "Individual",
     venue: "Civil Lab",
+    cover: "/cube.jpeg",
     prizes: {
       first: "$1000",
       second: "$500",
@@ -110,7 +113,7 @@ const events = [
     fee: "Free",
     teamSize: "Individual",
     venue: "Civil Lab",
-    cover: "/autocad.jpeg",
+    cover: "/autocad.jpg",
     prizes: {
       first: "$1000",
       second: "$500",
@@ -231,10 +234,21 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
           </div>
           <div className="grow" />
           <div className="mt-6">
-            <Button className="group/button w-full bg-primary/10 hover:bg-primary/20 text-primary-foreground">
-              Register Now
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
-            </Button>
+            {event.link && (
+              <Button
+                asChild
+                className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
+              >
+                <a
+                  href={event.link || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register Now
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </div>
@@ -263,17 +277,17 @@ const Index = () => {
           ))}
         </div>
       </div>
-      <div className="p-8 border-t bg-zinc-900/50">
+      <div className="p-8 border-t bg-zinc-900/70">
         <div className="text-center text-foreground  mb-4">ORGANIZED BY</div>
-        <div className="flex mx-auto justify-center container gap-8">
-          <div className="flex flex-col items-center w-fit">
+        <div className="flex mx-auto justify-center flex-wrap container gap-8">
+          <div className="flex flex-col shrink-0 items-center w-fit">
             <img src="/gpc-logo.png" alt="auto" className="w-16" />
             <p className="text-sm">GPC Perinthalmanna</p>
           </div>
-          <div className="flex flex-col items-center w-fit">
+          <div className="flex flex-col shrink-0 items-center w-fit">
             <img src="/iedc-logo.png" alt="auto" className="h-20" />
           </div>
-          <div className="flex flex-col items-center w-fit">
+          <div className="flex flex-col shrink-0 items-center w-fit">
             <img src="/iic-logo.png" alt="auto" className="h-20" />
           </div>
         </div>
