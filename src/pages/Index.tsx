@@ -1,5 +1,5 @@
 
-import { Trophy, Users, Calendar, ArrowRight } from "lucide-react";
+import { Trophy, Users, Calendar, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -24,6 +24,7 @@ const events = [
     type: "Workshop",
     fee: "100/-",
     teamSize: "Individual",
+    venue: null,
     prizes: null
   },
   {
@@ -37,6 +38,108 @@ const events = [
       first: "$3000",
       second: "$2000",
       third: "$1000"
+    }
+  },
+  {
+    id: 4,
+    title: "Wiring Competition",
+    description: "Showcase your electrical wiring skills and knowledge.",
+    type: "Competition",
+    fee: "Free",
+    teamSize: "Upto 2 members",
+    prizes: {
+      first: "$1000",
+      second: "$500",
+      third: "$100"
+    }
+  },
+  {
+    id: 5,
+    title: "EV Workshop",
+    description: "Deep dive into electric vehicle technology and future trends.",
+    type: "Workshop",
+    fee: "200/-",
+    teamSize: "Individual",
+    venue: "CAD Lab",
+    prizes: null
+  },
+  {
+    id: 6,
+    title: "Build a Resistance",
+    description: "Test your electronics knowledge in this exciting competition.",
+    type: "Competition",
+    fee: "Free",
+    teamSize: "Individual",
+    venue: "EE Electronics Lab",
+    prizes: {
+      first: "$1000",
+      second: "$500",
+      third: "$100"
+    }
+  },
+  {
+    id: 7,
+    title: "CUBE Making",
+    description: "Demonstrate your structural engineering skills.",
+    type: "Competition",
+    fee: "Free",
+    teamSize: "Individual",
+    venue: "Civil Lab",
+    prizes: {
+      first: "$1000",
+      second: "$500",
+      third: "$100"
+    }
+  },
+  {
+    id: 8,
+    title: "AutoCad Competition",
+    description: "Show your CAD skills in mechanical and civil design.",
+    type: "Competition",
+    fee: "Free",
+    teamSize: "Individual",
+    venue: "Civil Lab",
+    prizes: {
+      first: "$1000",
+      second: "$500",
+      third: "$100"
+    }
+  },
+  {
+    id: 9,
+    title: "UI/UX Workshop",
+    description: "Learn modern UI/UX design principles and practices.",
+    type: "Workshop",
+    fee: "50/-",
+    teamSize: "Individual",
+    venue: "ICFC Lab",
+    prizes: null
+  },
+  {
+    id: 10,
+    title: "Coding Competition",
+    description: "Put your programming skills to the test.",
+    type: "Competition",
+    fee: "Free",
+    teamSize: "Individual",
+    venue: "ICFC Lab",
+    prizes: {
+      first: "$1000",
+      second: "$500",
+      third: "$100"
+    }
+  },
+  {
+    id: 11,
+    title: "Project Expo",
+    description: "Showcase your innovative projects and win big prizes.",
+    type: "Competition",
+    fee: "100/-",
+    teamSize: "Upto 3 members",
+    prizes: {
+      first: "$20000",
+      second: "$10000",
+      third: "$5000"
     }
   }
 ];
@@ -71,6 +174,13 @@ const EventCard = ({ event }: { event: typeof events[0] }) => {
           <Users className="h-4 w-4 text-muted-foreground" />
           <span className="text-muted-foreground">{event.teamSize}</span>
         </div>
+
+        {event.venue && (
+          <div className="flex items-center gap-2 text-sm">
+            <MapPin className="h-4 w-4 text-muted-foreground" />
+            <span className="text-muted-foreground">{event.venue}</span>
+          </div>
+        )}
 
         {event.prizes && (
           <div className="flex items-center gap-2 text-sm">
