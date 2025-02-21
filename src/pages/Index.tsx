@@ -1,4 +1,4 @@
-import { Trophy, Users, Calendar, ArrowRight, MapPin } from "lucide-react";
+import { Trophy, Users, Calendar, ArrowRight, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -128,7 +128,6 @@ const events = [
     fee: "50/-",
     teamSize: "Individual",
     cover: "/ui.jpeg",
-
     venue: "ICFC Lab",
     prizes: null,
   },
@@ -155,7 +154,6 @@ const events = [
     fee: "100/-",
     teamSize: "Upto 3 members",
     cover: "/expo.jpeg",
-
     prizes: {
       first: "$20000",
       second: "$10000",
@@ -256,23 +254,105 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
   );
 };
 
-const Index = () => {
+const FeaturedEvent = () => {
+  const projectExpo = events.find((event) => event.title === "Project Expo")!;
+  
   return (
-    <div className="min-h-screen  bg-[url('../bg-2.jpg')]">
+    <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 mb-12">
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="relative h-[300px] rounded-lg overflow-hidden">
+          <img 
+            src="/expo.jpeg" 
+            alt="Project Expo" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex flex-col">
+          <Badge 
+            variant="outline" 
+            className="mb-2 w-fit bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
+          >
+            Featured Competition
+          </Badge>
+          <h2 className="text-2xl font-bold mb-3">{projectExpo.title}</h2>
+          <p className="text-muted-foreground mb-4">{projectExpo.description}</p>
+          
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 text-sm">
+              <Calendar className="h-4 w-4 text-muted-foreground" />
+              <span className="text-muted-foreground">Fee: {projectExpo.fee}</span>
+            </div>
+            
+            <div className="flex items-center gap-2 text-sm">
+              <Users className="h-4 w-4 text-muted-foreground" />
+              <span className="text-muted-foreground">{projectExpo.teamSize}</span>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm">
+              <Trophy className="h-4 w-4 text-yellow-500" />
+              <div className="flex gap-2">
+                <span className="prize-text">1st: {projectExpo.prizes?.first}</span>
+                <span className="text-muted-foreground">|</span>
+                <span className="prize-text">2nd: {projectExpo.prizes?.second}</span>
+                <span className="text-muted-foreground">|</span>
+                <span className="prize-text">3rd: {projectExpo.prizes?.third}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <Button 
+              className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
+            >
+              Register Now
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const HelpDesk = () => {
+  return (
+    <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 mb-12">
+      <h3 className="text-lg font-semibold mb-4">Need Help? Contact Us</h3>
+      <div className="space-y-3">
+        <div className="flex items-center gap-2">
+          <Phone className="h-4 w-4 text-muted-foreground" />
+          <span className="text-muted-foreground">Midhun: +917306726134</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Phone className="h-4 w-4 text-muted-foreground" />
+          <span className="text-muted-foreground">Anuroop: +919400472882</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Index = () => {
+  const filteredEvents = events.filter(event => event.title !== "Project Expo");
+  
+  return (
+    <div className="min-h-screen bg-[url('../bg-2.jpg')]">
       <div className="container px-4 py-16 mx-auto">
         <div className="text-center mb-16 space-y-4">
           <div>
             <img src="/logo.png" alt="Hope 25 logo" className="mx-auto w-36" />
             <img src="/name.png" alt="Hope 25 logo" className="mx-auto mt-5" />
           </div>
-
           <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
             Igniting innovation, inspiring tomorrow
           </p>
         </div>
 
+        <FeaturedEvent />
+        <HelpDesk />
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-          {events.map((event) => (
+          {filteredEvents.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
         </div>
