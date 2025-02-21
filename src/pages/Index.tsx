@@ -39,6 +39,7 @@ const events = [
     type: "Competition",
     fee: "Free",
     teamSize: "Upto 3 members",
+    cover: "/auto.jpeg",
     prizes: {
       first: "$3000",
       second: "$2000",
@@ -132,6 +133,7 @@ const events = [
     type: "Competition",
     fee: "Free",
     teamSize: "Individual",
+    cover: "/coding.jpeg",
     venue: "ICFC Lab",
     prizes: {
       first: "$1000",
