@@ -217,7 +217,7 @@ const Index = () => {
             HOPE 25
           </h1>
           <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
-            Join us for an exciting celebration of technology and innovation
+            Igniting innovation, inspiring tomorrow
           </p>
         </div>
 
