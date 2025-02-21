@@ -1,69 +1,36 @@
-# Welcome to your Lovable project
+# Hope 25 - GPTC Perinthalmanna
 
-## Project info
+![Cover Image](/public//og-image-compressed.png)
 
-**URL**: https://lovable.dev/projects/9aabdfa2-b139-410a-b10b-4b22c6612626
+## Project Overview
+This project is the official website for **Hope 25**, the techfest of GPTC Perinthalmanna. The website showcases the events, provides registration links, and serves as a platform to inspire innovation and creativity.
 
-## How can I edit this code?
+## Events
+### Line Follower
+Build and program a robot that can follow a line path autonomously.
+- **Type**: Competition
+- **Fee**: ₹100
+- **Team Size**: Up to 3 members
+- **Prizes**: $3000 (1st), $2000 (2nd), $1000 (3rd)
 
-There are several ways of editing your application.
+### Drone Workshop
+Learn about drone technology, assembly, and flying techniques.
+- **Type**: Workshop
+- **Fee**: ₹100
+- **Team Size**: Individual
 
-**Use Lovable**
+### Auto Quiz
+Test your knowledge about automobiles and automotive technology.
+- **Type**: Competition
+- **Fee**: Free
+- **Team Size**: Up to 3 members
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9aabdfa2-b139-410a-b10b-4b22c6612626) and start prompting.
+## Contributing
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes.
+4. Push your branch and open a pull request.
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9aabdfa2-b139-410a-b10b-4b22c6612626) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
