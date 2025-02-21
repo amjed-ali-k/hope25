@@ -49,6 +49,7 @@ const events = [
     fee: "Free",
     teamSize: "Upto 3 members",
     cover: "/auto.jpeg",
+    link: "https://forms.gle/4aJ13vkZaeyUipKz5",
     prizes: {
       first: "$3000",
       second: "$2000",
@@ -343,7 +344,10 @@ const FeaturedEvent = () => {
           </div>
 
           <div className="mt-6">
-            <Button asChild className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground">
+            <Button
+              asChild
+              className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
+            >
               <a
                 href={projectExpo.link || "#"}
                 target="_blank"
