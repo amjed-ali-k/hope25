@@ -214,7 +214,7 @@ const Index = () => {
       <div className="container px-4 py-16 mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-            TechFest 2024
+            HOPE 25
           </h1>
           <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
             Join us for an exciting celebration of technology and innovation
