@@ -228,11 +228,11 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
               <div className="flex items-center gap-2 text-sm">
                 <Trophy className="h-4 w-4 text-yellow-500" />
                 <div className="flex gap-2">
-                  <span className="prize-text">1st: {event.prizes.first}</span>
+                  <span className="prize-text font-bold text-base">{event.prizes.first}</span>
                   <span className="text-muted-foreground">|</span>
-                  <span className="prize-text">2nd: {event.prizes.second}</span>
+                  <span className="prize-text font-bold text-base">{event.prizes.second}</span>
                   <span className="text-muted-foreground">|</span>
-                  <span className="prize-text">3rd: {event.prizes.third}</span>
+                  <span className="prize-text font-bold text-base">{event.prizes.third}</span>
                 </div>
               </div>
             )}
@@ -302,20 +302,23 @@ const FeaturedEvent = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-2 text-sm">
-              <Trophy className="h-4 w-4 text-yellow-500" />
-              <div className="flex gap-2">
-                <span className="prize-text">
-                  1st: {projectExpo.prizes?.first}
-                </span>
-                <span className="text-muted-foreground">|</span>
-                <span className="prize-text">
-                  2nd: {projectExpo.prizes?.second}
-                </span>
-                <span className="text-muted-foreground">|</span>
-                <span className="prize-text">
-                  3rd: {projectExpo.prizes?.third}
-                </span>
+            <div className="flex items-center gap-2">
+              <Trophy className="h-5 w-5 text-yellow-500" />
+              <div className="flex gap-3">
+                <div className="flex flex-col items-center">
+                  <span className="text-xs text-muted-foreground">1st Prize</span>
+                  <span className="prize-text font-bold text-xl">{projectExpo.prizes?.first}</span>
+                </div>
+                <span className="text-muted-foreground self-end">|</span>
+                <div className="flex flex-col items-center">
+                  <span className="text-xs text-muted-foreground">2nd Prize</span>
+                  <span className="prize-text font-bold text-xl">{projectExpo.prizes?.second}</span>
+                </div>
+                <span className="text-muted-foreground self-end">|</span>
+                <div className="flex flex-col items-center">
+                  <span className="text-xs text-muted-foreground">3rd Prize</span>
+                  <span className="prize-text font-bold text-xl">{projectExpo.prizes?.third}</span>
+                </div>
               </div>
             </div>
           </div>
