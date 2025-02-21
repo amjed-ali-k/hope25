@@ -80,6 +80,7 @@ const events = [
     type: "Competition",
     fee: "Free",
     teamSize: "Individual",
+    cover: "resistor.jpeg",
     venue: "EE Electronics Lab",
     prizes: {
       first: "$1000",
@@ -123,6 +124,8 @@ const events = [
     type: "Workshop",
     fee: "50/-",
     teamSize: "Individual",
+    cover: "/ui.jpeg",
+
     venue: "ICFC Lab",
     prizes: null,
   },
@@ -148,6 +151,8 @@ const events = [
     type: "Competition",
     fee: "100/-",
     teamSize: "Upto 3 members",
+    cover: "/expo.jpeg",
+
     prizes: {
       first: "$20000",
       second: "$10000",
@@ -256,6 +261,21 @@ const Index = () => {
           {events.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
+        </div>
+      </div>
+      <div className="p-8 border-t bg-zinc-900/50">
+        <div className="text-center text-foreground  mb-4">ORGANIZED BY</div>
+        <div className="flex mx-auto justify-center container gap-8">
+          <div className="flex flex-col items-center w-fit">
+            <img src="/gpc-logo.png" alt="auto" className="w-16" />
+            <p className="text-sm">GPC Perinthalmanna</p>
+          </div>
+          <div className="flex flex-col items-center w-fit">
+            <img src="/iedc-logo.png" alt="auto" className="h-20" />
+          </div>
+          <div className="flex flex-col items-center w-fit">
+            <img src="/iic-logo.png" alt="auto" className="h-20" />
+          </div>
         </div>
       </div>
     </div>
