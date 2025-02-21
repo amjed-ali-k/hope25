@@ -66,6 +66,7 @@ const events = [
       "Deep dive into electric vehicle technology and future trends.",
     type: "Workshop",
     fee: "200/-",
+    cover: "/ev-workshop.jpeg",
     teamSize: "Individual",
     venue: "CAD Lab",
     prizes: null,
