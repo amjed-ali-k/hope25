@@ -1,3 +1,4 @@
+
 import { Trophy, Users, Calendar, ArrowRight, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -316,7 +317,7 @@ const FeaturedEvent = () => {
 
 const HelpDesk = () => {
   return (
-    <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 mb-12">
+    <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
       <h3 className="text-lg font-semibold mb-4">Need Help? Contact Us</h3>
       <div className="space-y-3">
         <div className="flex items-center gap-2">
@@ -349,12 +350,15 @@ const Index = () => {
         </div>
 
         <FeaturedEvent />
-        <HelpDesk />
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto mb-16">
           {filteredEvents.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
+        </div>
+
+        <div className="max-w-2xl mx-auto">
+          <HelpDesk />
         </div>
       </div>
       <div className="p-8 border-t bg-zinc-900/70">
