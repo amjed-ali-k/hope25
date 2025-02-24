@@ -173,7 +173,7 @@ const events = [
     prizes: {
       first: "₹20000",
       second: "₹10000",
-      third: "₹500",
+      third: "₹5000",
     },
   },
 ];
