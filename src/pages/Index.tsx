@@ -17,14 +17,14 @@ const events = [
     description:
       "Build and program a robot that can follow a line path autonomously.",
     type: "Competition",
-    fee: "100/-",
+    fee: "Free",
     teamSize: "Upto 3 members",
     cover: "/line-follower.jpeg",
     link: "https://forms.gle/chK4Y4Ctj8tBLGa98",
     prizes: {
-      first: "$3000",
-      second: "$2000",
-      third: "$1000",
+      first: "₹3000",
+      second: "₹2000",
+      third: "₹1000",
     },
   },
   {
@@ -33,7 +33,7 @@ const events = [
     description:
       "Learn about drone technology, assembly, and flying techniques.",
     type: "Workshop",
-    fee: "100/-",
+    fee: "50/-",
     teamSize: "Individual",
     cover: "/drone.jpeg",
     link: "https://forms.gle/WjgKvtGFzm4QVA2C6",
@@ -51,9 +51,9 @@ const events = [
     cover: "/auto.jpeg",
     link: "https://forms.gle/4aJ13vkZaeyUipKz5",
     prizes: {
-      first: "$3000",
-      second: "$2000",
-      third: "$1000",
+      first: "₹2000",
+      second: "₹1000",
+      third: "₹500",
     },
   },
   {
@@ -66,9 +66,9 @@ const events = [
     link: "https://forms.gle/rNyLs82ScgbxEXjX9",
     teamSize: "Upto 2 members",
     prizes: {
-      first: "$1000",
-      second: "$500",
-      third: "$100",
+      first: "₹2000",
+      second: "₹1000",
+      third: "₹500",
     },
   },
   {
@@ -77,7 +77,7 @@ const events = [
     description:
       "Deep dive into electric vehicle technology and future trends.",
     type: "Workshop",
-    fee: "200/-",
+    fee: "50/-",
     cover: "/ev-workshop.jpeg",
     teamSize: "Individual",
     link: "https://forms.gle/J9kib54AHUbBWPpM7",
@@ -96,9 +96,9 @@ const events = [
     venue: "EE Electronics Lab",
     link: "https://forms.gle/dYTNxtFH9FCsJV299",
     prizes: {
-      first: "$1000",
-      second: "$500",
-      third: "$100",
+      first: "₹500",
+      second: "₹300",
+      third: "₹200",
     },
   },
   {
@@ -112,9 +112,9 @@ const events = [
     cover: "/cube.jpeg",
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
     prizes: {
-      first: "$1000",
-      second: "$500",
-      third: "$100",
+      first: "₹1500",
+      second: "₹1000",
+      third: "₹500",
     },
   },
   {
@@ -128,9 +128,9 @@ const events = [
     cover: "/autocad.jpg",
     link: "https://forms.gle/qFBVCqx782JEJKeb7",
     prizes: {
-      first: "$1000",
-      second: "$500",
-      third: "$100",
+      first: "₹1500",
+      second: "₹1000",
+      third: "₹500",
     },
   },
   {
@@ -156,9 +156,9 @@ const events = [
     link: "https://forms.gle/xjYeAfPtMkwJgezQ9",
     venue: "ICFC Lab",
     prizes: {
-      first: "$1000",
-      second: "$500",
-      third: "$100",
+      first: "₹2000",
+      second: "₹1000",
+      third: "₹500",
     },
   },
   {
@@ -171,9 +171,9 @@ const events = [
     link: "https://forms.gle/KKRJ6XHDW1j1PKLK9",
     cover: "/expo.jpeg",
     prizes: {
-      first: "$20000",
-      second: "$10000",
-      third: "$5000",
+      first: "₹20000",
+      second: "₹10000",
+      third: "₹500",
     },
   },
 ];
