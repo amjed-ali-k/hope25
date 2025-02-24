@@ -63,6 +63,7 @@ const events = [
     type: "Competition",
     fee: "Free",
     cover: "/wiring.jpeg",
+    link: "https://forms.gle/rNyLs82ScgbxEXjX9",
     teamSize: "Upto 2 members",
     prizes: {
       first: "$1000",
@@ -79,6 +80,7 @@ const events = [
     fee: "200/-",
     cover: "/ev-workshop.jpeg",
     teamSize: "Individual",
+    link: "https://forms.gle/J9kib54AHUbBWPpM7",
     venue: "CAD Lab",
     prizes: null,
   },
@@ -92,6 +94,7 @@ const events = [
     teamSize: "Individual",
     cover: "resistor.jpeg",
     venue: "EE Electronics Lab",
+    link: "https://forms.gle/dYTNxtFH9FCsJV299",
     prizes: {
       first: "$1000",
       second: "$500",
@@ -107,6 +110,7 @@ const events = [
     teamSize: "Individual",
     venue: "Civil Lab",
     cover: "/cube.jpeg",
+    link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
     prizes: {
       first: "$1000",
       second: "$500",
@@ -122,6 +126,7 @@ const events = [
     teamSize: "Individual",
     venue: "Civil Lab",
     cover: "/autocad.jpg",
+    link: "https://forms.gle/qFBVCqx782JEJKeb7",
     prizes: {
       first: "$1000",
       second: "$500",
@@ -136,6 +141,7 @@ const events = [
     fee: "50/-",
     teamSize: "Individual",
     cover: "/ui.jpeg",
+    link: "https://forms.gle/SvFnCXTcQrhyEiFC7",
     venue: "ICFC Lab",
     prizes: null,
   },
@@ -147,6 +153,7 @@ const events = [
     fee: "Free",
     teamSize: "Individual",
     cover: "/coding.jpeg",
+    link: "https://forms.gle/xjYeAfPtMkwJgezQ9",
     venue: "ICFC Lab",
     prizes: {
       first: "$1000",
