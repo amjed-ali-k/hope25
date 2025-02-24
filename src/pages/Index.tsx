@@ -21,6 +21,7 @@ const events = [
     teamSize: "Upto 3 members",
     cover: "/line-follower.jpeg",
     link: "https://forms.gle/chK4Y4Ctj8tBLGa98",
+    document: "/Hope 25 Line follower rules.pdf",
     prizes: {
       first: "₹3000",
       second: "₹2000",
@@ -155,6 +156,7 @@ const events = [
     cover: "/coding.jpeg",
     link: "https://forms.gle/xjYeAfPtMkwJgezQ9",
     venue: "ICFC Lab",
+    document: "/Hope 25 Coding competition rules.pdf",
     prizes: {
       first: "₹2000",
       second: "₹1000",
@@ -170,6 +172,7 @@ const events = [
     teamSize: "Upto 5 members",
     link: "https://forms.gle/KKRJ6XHDW1j1PKLK9",
     cover: "/expo.jpeg",
+    document: "/HOPE 25 Project Expo Rules.pdf",
     prizes: {
       first: "₹20000",
       second: "₹10000",
@@ -193,7 +196,10 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
             className="w-full max-h-48 object-cover object-center rounded-t"
           />
         )}
-        <div className="p-6 flex flex-col grow">
+        <div className="p-6 flex flex-col grow relative">
+        {event.document &&  <div className="absolute right-4 top-6 z-0">
+            <Button variant="outline" onClick={() => window.open(event.document)} className="!rounded-full">View Details</Button>
+          </div>}
           <div className="flex justify-between items-start mb-4">
             <div>
               <Badge
@@ -290,7 +296,10 @@ const FeaturedEvent = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col relative">
+        {projectExpo.document &&  <div className="absolute right-4 top-6 z-0">
+            <Button variant="outline" onClick={() => window.open(projectExpo.document)} className="!rounded-full">View Details</Button>
+          </div>}
           <Badge
             variant="outline"
             className="mb-2 w-fit bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
