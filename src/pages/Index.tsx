@@ -198,7 +198,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
         )}
         <div className="p-6 flex flex-col grow relative">
         {event.document &&  <div className="absolute right-4 top-6 z-0">
-            <Button variant="outline" onClick={() => window.open(event.document)} className="!rounded-full">View Details</Button>
+            <Button size="sm" variant="outline" onClick={() => window.open(event.document)} className="!rounded-full">View Rules</Button>
           </div>}
           <div className="flex justify-between items-start mb-4">
             <div>
@@ -298,7 +298,7 @@ const FeaturedEvent = () => {
         </div>
         <div className="flex flex-col relative">
         {projectExpo.document &&  <div className="absolute right-4 top-6 z-0">
-            <Button variant="outline" onClick={() => window.open(projectExpo.document)} className="!rounded-full">View Details</Button>
+            <Button variant="outline" onClick={() => window.open(projectExpo.document)} className="!rounded-full">View Rules</Button>
           </div>}
           <Badge
             variant="outline"
