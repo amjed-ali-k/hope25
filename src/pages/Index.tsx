@@ -402,7 +402,7 @@ const HelpDesk = () => {
         <div className="flex items-center gap-2">
           <Phone className="h-4 w-4 text-muted-foreground" />
           <span className="text-muted-foreground">
-            Fida Fathima: +917306204359
+            Fida Fathima: +917736506384
           </span>
         </div>
       </div>
