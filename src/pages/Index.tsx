@@ -126,7 +126,7 @@ const events = [
     cover: "/cube.jpeg",
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
     formId: "1dzewcqN0f4Nb4x-tQK5wGSEgJPNnABv64O0Q7gUnHq8",
-    document: "/Hope 25 Autocad competition rules.pdf",
+    document: "/Hope 25 Concrete Mix and Cube design.pdf",
     prizes: {
       first: "₹1500",
       second: "₹1000",
