@@ -58,6 +58,7 @@ const events = [
     teamSize: "Upto 3 members",
     cover: "/auto.jpeg",
     link: "https://forms.gle/4aJ13vkZaeyUipKz5",
+    document: "/Hope 25 Auto Quiz.pdf",
     formId: "1wo2q0woRIkijDe_ja05m_5MmRRiNCLEWsS0lter1ais",
     prizes: {
       first: "₹2000",
