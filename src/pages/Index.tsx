@@ -68,7 +68,7 @@ const events = [
   },
   {
     id: 4,
-    title: "Wiring Competition",
+    title: "Wire it up",
     description: "Showcase your electrical wiring skills and knowledge.",
     type: "Competition",
     fee: "Free",
@@ -76,6 +76,7 @@ const events = [
     link: "https://forms.gle/rNyLs82ScgbxEXjX9",
     formId: "10j-227x3kmCJLWSFUzIoDYEAuiUd7pWHx-J5jd2oOi0",
     teamSize: "Upto 2 members",
+    document: "/Hope 25 Wire it up.pdf",
     prizes: {
       first: "₹2000",
       second: "₹1000",
@@ -120,8 +121,8 @@ const events = [
     id: 7,
     title: "Concrete Mix & Cube Design",
     description: "Demonstrate your structural engineering skills.",
-    type: "Competition",
-    fee: "Free",
+    type: "Mixed",
+    fee: "50/-",
     teamSize: "Individual",
     venue: "Civil Lab",
     cover: "/cube.jpeg",
@@ -249,11 +250,14 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
             <div>
               <Badge
                 variant="outline"
-                className={`mb-2 ${
-                  event.type === "Competition"
-                    ? "bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
-                    : "bg-blue-500/10 text-blue-400 hover:bg-blue-500/20"
-                }`}
+                className={cn("mb-2", {
+                  "bg-purple-500/10 text-purple-400 hover:bg-purple-500/20":
+                    event.type === "Competition",
+                  "bg-blue-500/10 text-blue-400 hover:bg-blue-500/20":
+                    event.type === "Workshop",
+                  "bg-amber-500/10 text-amber-400 hover:bg-amber-500/20":
+                    event.type === "Mixed",
+                })}
               >
                 {event.type}
               </Badge>
@@ -289,9 +293,11 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
             {event.limit && (
               <div className="flex items-center gap-2 text-sm">
                 <RockingChair className="h-4 w-4 text-muted-foreground" />
-                <span className={cn("text-muted-foreground", {
-                  "text-red-500": seatsLeft < 1
-                })}>
+                <span
+                  className={cn("text-muted-foreground", {
+                    "text-red-500": seatsLeft < 1,
+                  })}
+                >
                   {isLoading
                     ? "Loading..."
                     : seatsLeft > 0
