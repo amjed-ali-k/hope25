@@ -110,7 +110,7 @@ const events = [
     venue: "EE Electronics Lab",
     link: "https://forms.gle/dYTNxtFH9FCsJV299",
     formId: "1ZCUEN0PlHygB_FGL1DQosIJNbtc0K2BIyH-fE6QxvIQ",
-
+    document: "/Hope 25 Build a resistance.pdf",
     prizes: {
       first: "₹500",
       second: "₹300",
