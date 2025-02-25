@@ -5,10 +5,15 @@ import {
   ArrowRight,
   MapPin,
   Phone,
+  RockingChair,
+  UserCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import useSWR from "swr/immutable";
+
+const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 const events = [
   {
@@ -22,6 +27,7 @@ const events = [
     cover: "/line-follower.jpeg",
     link: "https://forms.gle/chK4Y4Ctj8tBLGa98",
     document: "/Hope 25 Line follower rules.pdf",
+    formId: "1fpZ6lKPMd14R18oIKbTycvObMkQXYPPdqHJYMWu9eYA",
     prizes: {
       first: "₹3000",
       second: "₹2000",
@@ -38,6 +44,7 @@ const events = [
     teamSize: "Individual",
     cover: "/drone.jpeg",
     link: "https://forms.gle/WjgKvtGFzm4QVA2C6",
+    formId: "1OHSW6G6C_vqlR6-9zvpPdYbMKenfrf1ZSLeji1gTfG8",
     venue: null,
     prizes: null,
   },
@@ -51,6 +58,7 @@ const events = [
     teamSize: "Upto 3 members",
     cover: "/auto.jpeg",
     link: "https://forms.gle/4aJ13vkZaeyUipKz5",
+    formId: "1wo2q0woRIkijDe_ja05m_5MmRRiNCLEWsS0lter1ais",
     prizes: {
       first: "₹2000",
       second: "₹1000",
@@ -65,6 +73,7 @@ const events = [
     fee: "Free",
     cover: "/wiring.jpeg",
     link: "https://forms.gle/rNyLs82ScgbxEXjX9",
+    formId: "10j-227x3kmCJLWSFUzIoDYEAuiUd7pWHx-J5jd2oOi0",
     teamSize: "Upto 2 members",
     prizes: {
       first: "₹2000",
@@ -82,6 +91,8 @@ const events = [
     cover: "/ev-workshop.jpeg",
     teamSize: "Individual",
     link: "https://forms.gle/J9kib54AHUbBWPpM7",
+    formId: "1N9zn63w9NQ3UNf8mk1wZCBufz7hjxnedAse1Ts27xVE",
+
     venue: "CAD Lab",
     prizes: null,
   },
@@ -96,6 +107,8 @@ const events = [
     cover: "resistor.jpeg",
     venue: "EE Electronics Lab",
     link: "https://forms.gle/dYTNxtFH9FCsJV299",
+    formId: "1ZCUEN0PlHygB_FGL1DQosIJNbtc0K2BIyH-fE6QxvIQ",
+
     prizes: {
       first: "₹500",
       second: "₹300",
@@ -112,6 +125,8 @@ const events = [
     venue: "Civil Lab",
     cover: "/cube.jpeg",
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
+    formId: "1dzewcqN0f4Nb4x-tQK5wGSEgJPNnABv64O0Q7gUnHq8",
+
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -128,6 +143,8 @@ const events = [
     venue: "Civil Lab",
     cover: "/autocad.jpg",
     link: "https://forms.gle/qFBVCqx782JEJKeb7",
+    formId: "1D0GDhnbmfMHHx_pD7eE8vUJVGB-UFeoXNN3w5tHUfWk",
+
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -144,6 +161,8 @@ const events = [
     cover: "/ui.jpeg",
     link: "https://forms.gle/SvFnCXTcQrhyEiFC7",
     venue: "ICFC Lab",
+    formId: "1-2xLgHXp0ukndm3we25R4lWaK9Vk3zWu1rv8HxMcK70",
+    limit: 60,
     prizes: null,
   },
   {
@@ -155,6 +174,8 @@ const events = [
     teamSize: "Individual",
     cover: "/coding.jpeg",
     link: "https://forms.gle/xjYeAfPtMkwJgezQ9",
+    formId: "1eysb_IUDJhUK275nnpDP4sY9mNdpfPbMELvbiELHsh8",
+
     venue: "ICFC Lab",
     document: "/Hope 25 Coding competition rules.pdf",
     prizes: {
@@ -182,6 +203,20 @@ const events = [
 ];
 
 const EventCard = ({ event }: { event: (typeof events)[0] }) => {
+  const { data, isLoading } = useSWR<{
+    formId: string;
+    responseCount: number;
+  }>(
+    event.formId
+      ? `https://techfest-backend.amjedmgm.workers.dev/form-responses/${event.formId}`
+      : null,
+    fetcher
+  );
+  const seatsLeft = event.limit
+    ? event.limit - (data?.responseCount ?? 0)
+    : null;
+  const showButton = event.limit ? seatsLeft > 0 : true;
+
   return (
     <div className="flex flex-col">
       <div
@@ -197,9 +232,18 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
           />
         )}
         <div className="p-6 flex flex-col grow relative">
-        {event.document &&  <div className="absolute right-4 top-6 z-0">
-            <Button size="sm" variant="outline" onClick={() => window.open(event.document)} className="!rounded-full">View Rules</Button>
-          </div>}
+          {event.document && (
+            <div className="absolute right-4 top-6 z-0">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => window.open(event.document)}
+                className="!rounded-full"
+              >
+                View Rules
+              </Button>
+            </div>
+          )}
           <div className="flex justify-between items-start mb-4">
             <div>
               <Badge
@@ -231,7 +275,30 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
               <Users className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">{event.teamSize}</span>
             </div>
-
+            {!event.limit && (
+              <div className="flex items-center gap-2 text-sm">
+                <UserCheck className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">
+                  {isLoading
+                    ? "Loading..."
+                    : `${data?.responseCount} Registrations`}
+                </span>
+              </div>
+            )}
+            {event.limit && (
+              <div className="flex items-center gap-2 text-sm">
+                <RockingChair className="h-4 w-4 text-muted-foreground" />
+                <span className={cn("text-muted-foreground", {
+                  "text-red-500": seatsLeft < 1
+                })}>
+                  {isLoading
+                    ? "Loading..."
+                    : seatsLeft > 0
+                    ? `${seatsLeft} Seats Left`
+                    : "Event Full"}
+                </span>
+              </div>
+            )}
             {event.venue && (
               <div className="flex items-center gap-2 text-sm">
                 <MapPin className="h-4 w-4 text-muted-foreground" />
@@ -260,7 +327,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
           </div>
           <div className="grow" />
           <div className="mt-6">
-            {event.link && (
+            {event.link && showButton && (
               <Button
                 asChild
                 className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
@@ -297,9 +364,17 @@ const FeaturedEvent = () => {
           />
         </div>
         <div className="flex flex-col relative">
-        {projectExpo.document &&  <div className="absolute right-4 top-6 z-0">
-            <Button variant="outline" onClick={() => window.open(projectExpo.document)} className="!rounded-full">View Rules</Button>
-          </div>}
+          {projectExpo.document && (
+            <div className="absolute right-4 top-6 z-0">
+              <Button
+                variant="outline"
+                onClick={() => window.open(projectExpo.document)}
+                className="!rounded-full"
+              >
+                View Rules
+              </Button>
+            </div>
+          )}
           <Badge
             variant="outline"
             className="mb-2 w-fit bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
