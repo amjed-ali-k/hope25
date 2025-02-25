@@ -327,7 +327,7 @@ const FeaturedEvent = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              <Trophy className="h-5 w-5 text-yellow-500" />
+              <Trophy className="h-5 w-5 self-end mb-1 text-yellow-500" />
               <div className="flex gap-3">
                 <div className="flex flex-col items-center">
                   <span className="text-xs text-muted-foreground">
