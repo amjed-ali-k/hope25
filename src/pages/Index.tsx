@@ -117,7 +117,7 @@ const events = [
   },
   {
     id: 7,
-    title: "CUBE Making",
+    title: "Concrete Mix & Cube Design",
     description: "Demonstrate your structural engineering skills.",
     type: "Competition",
     fee: "Free",
@@ -126,7 +126,7 @@ const events = [
     cover: "/cube.jpeg",
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
     formId: "1dzewcqN0f4Nb4x-tQK5wGSEgJPNnABv64O0Q7gUnHq8",
-
+    document: "/Hope 25 Autocad competition rules.pdf",
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -144,7 +144,7 @@ const events = [
     cover: "/autocad.jpg",
     link: "https://forms.gle/qFBVCqx782JEJKeb7",
     formId: "1D0GDhnbmfMHHx_pD7eE8vUJVGB-UFeoXNN3w5tHUfWk",
-
+    document: "/Hope 25 Autocad competition rules.pdf",
     prizes: {
       first: "₹1500",
       second: "₹1000",
