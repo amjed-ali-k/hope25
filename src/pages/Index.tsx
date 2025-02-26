@@ -465,7 +465,17 @@ const FeaturedEvent = () => {
 const HelpDesk = () => {
   return (
     <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
-      <h3 className="text-lg font-semibold mb-4">Need Help? Contact Us</h3>
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold mb-4">Need Help? Contact Us</h3>
+        <Button
+          size="sm"
+          variant="outline"
+          onClick={() => window.open("https://maps.app.goo.gl/FawHwXkNmVryrmfD6")}
+          className="!rounded-full"
+        >
+          View Location
+        </Button>
+      </div>
       <div className="space-y-3 md:grid grid-cols-2">
         <div className="flex items-center gap-2">
           <Phone className="h-4 w-4 text-muted-foreground" />
@@ -505,9 +515,14 @@ const Index = () => {
             <img src="/logo.png" alt="Hope 25 logo" className="mx-auto w-36" />
             <img src="/name.png" alt="Hope 25 logo" className="mx-auto mt-5" />
           </div>
-          <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
-            Igniting innovation, inspiring tomorrow
-          </p>
+          <div>
+            <p className="text-xl font-light text-muted-foreground max-w-[600px] mx-auto">
+              Igniting innovation, inspiring tomorrow
+            </p>
+            <p className="text-xl font-bold text-muted-foreground max-w-[600px] mx-auto">
+              March 12th, 2025 • GPTC Perinthalmanna
+            </p>
+          </div>
         </div>
 
         <FeaturedEvent />
