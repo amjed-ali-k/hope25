@@ -520,7 +520,7 @@ const Index = () => {
               Igniting innovation, inspiring tomorrow
             </p>
             <p className="text-xl font-bold text-muted-foreground max-w-[600px] mx-auto">
-              March 12th, 2025 • GPTC Perinthalmanna
+              March 12th, 2025 | 9 AM   |    GPTC Perinthalmanna
             </p>
           </div>
         </div>
