@@ -515,9 +515,9 @@ const Index = () => {
     <div className="min-h-screen bg-[url('../bg-2.jpg')]">
       <div className="container px-4 py-16 mx-auto">
         <div className="text-center mb-16 space-y-4">
-          <div>
-            <img src="/logo.png" alt="Hope 25 logo" className="mx-auto w-36" />
-            <img src="/name.png" alt="Hope 25 logo" className="mx-auto mt-5" />
+          <div className="flex items-end mx-auto justify-center">
+            <img src="/logo.png" alt="Hope 25 logo" className="w-24 mr-3 -rotate-[20deg]" />
+            <img src="/name.png" alt="Hope 25 logo" className="mt-5" />
           </div>
           <div>
             <p className="text-xl font-light text-muted-foreground max-w-[600px] mx-auto">
