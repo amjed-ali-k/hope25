@@ -46,6 +46,7 @@ const events = [
     link: "https://forms.gle/WjgKvtGFzm4QVA2C6",
     formId: "1OHSW6G6C_vqlR6-9zvpPdYbMKenfrf1ZSLeji1gTfG8",
     venue: null,
+    limit: 30,
     prizes: null,
   },
   {
@@ -94,7 +95,7 @@ const events = [
     teamSize: "Individual",
     link: "https://forms.gle/J9kib54AHUbBWPpM7",
     formId: "1N9zn63w9NQ3UNf8mk1wZCBufz7hjxnedAse1Ts27xVE",
-
+    limit: 30,
     venue: "CAD Lab",
     prizes: null,
   },
@@ -129,6 +130,7 @@ const events = [
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
     formId: "1dzewcqN0f4Nb4x-tQK5wGSEgJPNnABv64O0Q7gUnHq8",
     document: "/Hope 25 Concrete Mix and Cube design.pdf",
+    limit: 60,
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -470,7 +472,9 @@ const HelpDesk = () => {
         <Button
           size="sm"
           variant="outline"
-          onClick={() => window.open("https://maps.app.goo.gl/FawHwXkNmVryrmfD6")}
+          onClick={() =>
+            window.open("https://maps.app.goo.gl/FawHwXkNmVryrmfD6")
+          }
           className="!rounded-full"
         >
           View Location
@@ -520,7 +524,7 @@ const Index = () => {
               Igniting innovation, inspiring tomorrow
             </p>
             <p className="text-xl font-bold text-muted-foreground max-w-[600px] mx-auto">
-              March 12th, 2025 | 9 AM   |    GPTC Perinthalmanna
+              March 12th, 2025 | 9 AM | GPTC Perinthalmanna
             </p>
           </div>
         </div>
