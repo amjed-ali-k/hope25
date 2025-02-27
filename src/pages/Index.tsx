@@ -24,7 +24,7 @@ const events = [
       "Build and program a robot that can follow a line path autonomously.",
     type: "Competition",
     fee: "Free",
-    teamSize: "Upto 3 members",
+    teamSize: "Upto 4 members",
     cover: "/line-follower.jpeg",
     link: "https://forms.gle/chK4Y4Ctj8tBLGa98",
     document: "/Hope 25 Line follower rules.pdf",
@@ -66,7 +66,7 @@ const events = [
     formId: "1wo2q0woRIkijDe_ja05m_5MmRRiNCLEWsS0lter1ais",
     time: "12:30 PM - 3:30 PM",
     prizes: {
-      first: "₹2000",
+      first: "₹1500",
       second: "₹1000",
       third: "₹500",
     },
@@ -120,9 +120,9 @@ const events = [
     document: "/Hope 25 Build a resistance.pdf",
     time: "9:00 AM - 12:00 PM",
     prizes: {
-      first: "₹500",
-      second: "₹300",
-      third: "₹200",
+      first: "₹750",
+      second: "₹500",
+      third: "₹250",
     },
   },
   {
@@ -140,9 +140,9 @@ const events = [
     limit: 48,
     time: "9:00 AM - 12:00 PM",
     prizes: {
-      first: "₹1500",
-      second: "₹1000",
-      third: "₹500",
+      first: "₹1000",
+      second: "₹500",
+      third: "-",
     },
   },
   {
