@@ -7,6 +7,7 @@ import {
   Phone,
   RockingChair,
   UserCheck,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -28,6 +29,7 @@ const events = [
     link: "https://forms.gle/chK4Y4Ctj8tBLGa98",
     document: "/Hope 25 Line follower rules.pdf",
     formId: "1fpZ6lKPMd14R18oIKbTycvObMkQXYPPdqHJYMWu9eYA",
+    time: "12:30 PM - 3:30 PM",
     prizes: {
       first: "₹3000",
       second: "₹2000",
@@ -46,6 +48,7 @@ const events = [
     link: "https://forms.gle/WjgKvtGFzm4QVA2C6",
     formId: "1OHSW6G6C_vqlR6-9zvpPdYbMKenfrf1ZSLeji1gTfG8",
     venue: null,
+    time: "9:00 AM - 12:00 PM",
     limit: 30,
     prizes: null,
   },
@@ -61,6 +64,7 @@ const events = [
     link: "https://forms.gle/4aJ13vkZaeyUipKz5",
     document: "/Hope 25 Auto Quiz.pdf",
     formId: "1wo2q0woRIkijDe_ja05m_5MmRRiNCLEWsS0lter1ais",
+    time: "12:30 PM - 3:30 PM",
     prizes: {
       first: "₹2000",
       second: "₹1000",
@@ -78,6 +82,7 @@ const events = [
     formId: "10j-227x3kmCJLWSFUzIoDYEAuiUd7pWHx-J5jd2oOi0",
     teamSize: "Upto 2 members",
     document: "/Hope 25 Wire it up.pdf",
+    time: "12:30 PM - 3:30 PM",
     prizes: {
       first: "₹2000",
       second: "₹1000",
@@ -95,7 +100,8 @@ const events = [
     teamSize: "Individual",
     link: "https://forms.gle/J9kib54AHUbBWPpM7",
     formId: "1N9zn63w9NQ3UNf8mk1wZCBufz7hjxnedAse1Ts27xVE",
-    limit: 30,
+    limit: 40,
+    time: "9:00 AM - 12:00 PM",
     venue: "CAD Lab",
     prizes: null,
   },
@@ -112,6 +118,7 @@ const events = [
     link: "https://forms.gle/dYTNxtFH9FCsJV299",
     formId: "1ZCUEN0PlHygB_FGL1DQosIJNbtc0K2BIyH-fE6QxvIQ",
     document: "/Hope 25 Build a resistance.pdf",
+    time: "9:00 AM - 12:00 PM",
     prizes: {
       first: "₹500",
       second: "₹300",
@@ -130,7 +137,8 @@ const events = [
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
     formId: "1dzewcqN0f4Nb4x-tQK5wGSEgJPNnABv64O0Q7gUnHq8",
     document: "/Hope 25 Concrete Mix and Cube design.pdf",
-    limit: 60,
+    limit: 48,
+    time: "9:00 AM - 12:00 PM",
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -149,6 +157,8 @@ const events = [
     link: "https://forms.gle/qFBVCqx782JEJKeb7",
     formId: "1D0GDhnbmfMHHx_pD7eE8vUJVGB-UFeoXNN3w5tHUfWk",
     document: "/Hope 25 Autocad competition rules.pdf",
+    time: "12:30 PM - 3:30 PM",
+
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -167,6 +177,8 @@ const events = [
     venue: "ICFC Lab",
     formId: "1-2xLgHXp0ukndm3we25R4lWaK9Vk3zWu1rv8HxMcK70",
     limit: 60,
+    time: "9:00 AM - 12:00 PM",
+
     prizes: null,
   },
   {
@@ -179,6 +191,7 @@ const events = [
     cover: "/coding.jpeg",
     link: "https://forms.gle/xjYeAfPtMkwJgezQ9",
     formId: "1eysb_IUDJhUK275nnpDP4sY9mNdpfPbMELvbiELHsh8",
+    time: "12:30 PM - 3:30 PM",
 
     venue: "ICFC Lab",
     document: "/Hope 25 Coding competition rules.pdf",
@@ -273,11 +286,21 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
           </div>
 
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-sm">
-              <Calendar className="h-4 w-4 text-muted-foreground" />
-              <span className="text-muted-foreground">Fee: {event.fee}</span>
-            </div>
+            <div className="flex justify-between">
+              <div className="flex items-center gap-2 text-sm">
+                <Calendar className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">Fee: {event.fee}</span>
+              </div>
 
+              {event.time && (
+                <div className="flex items-center gap-2 text-sm">
+                  <Clock className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">
+                    Time: {event.time}
+                  </span>
+                </div>
+              )}
+            </div>
             <div className="flex items-center gap-2 text-sm">
               <Users className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">{event.teamSize}</span>
@@ -516,7 +539,11 @@ const Index = () => {
       <div className="container px-4 py-16 mx-auto">
         <div className="text-center mb-16 space-y-4">
           <div className="flex items-end mx-auto justify-center">
-            <img src="/logo.png" alt="Hope 25 logo" className="w-24 mr-3 -rotate-[20deg]" />
+            <img
+              src="/logo.png"
+              alt="Hope 25 logo"
+              className="w-24 mr-3 -rotate-[20deg]"
+            />
             <img src="/name.png" alt="Hope 25 logo" className="mt-5" />
           </div>
           <div>
