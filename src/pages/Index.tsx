@@ -504,24 +504,50 @@ const HelpDesk = () => {
         </Button>
       </div>
       <div className="space-y-3 md:grid grid-cols-2">
-        <div className="flex items-center gap-2">
-          <Phone className="h-4 w-4 text-muted-foreground" />
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
           <span className="text-muted-foreground">Midhun: +917306726134</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Phone className="h-4 w-4 text-muted-foreground" />
-          <span className="text-muted-foreground">Anuroop: +919400472882</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Phone className="h-4 w-4 text-muted-foreground" />
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
           <span className="text-muted-foreground">
             Abishek K: +918089782037
           </span>
         </div>
-        <div className="flex items-center gap-2">
-          <Phone className="h-4 w-4 text-muted-foreground" />
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
           <span className="text-muted-foreground">
             Fida Fathima: +917736506384
+          </span>
+        </div>
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
+          <span className="text-muted-foreground">
+            Anuroop (IEDC Coordinator): +919400472882
+          </span>
+        </div>
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
+          <span className="text-muted-foreground">
+            Danishmon N (HOS Electrical): +919400502054
+          </span>
+        </div>
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
+          <span className="text-muted-foreground">
+            Navaneet A (HOS Electronics): +919074594568
+          </span>
+        </div>
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
+          <span className="text-muted-foreground">
+            Muhsina T (HOS Civil): +919497345608
+          </span>
+        </div>
+        <div className="flex items-start gap-2">
+          <Phone className="h-4 w-4 mt-1 text-muted-foreground" />
+          <span className="text-muted-foreground">
+            Ashokan AN (HOS Mechanical): +919446810407
           </span>
         </div>
       </div>
