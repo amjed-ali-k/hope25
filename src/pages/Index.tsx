@@ -225,10 +225,10 @@ const events = [
     fee: "50/-",
     teamSize: "Individual",
     link: "https://forms.gle/859bcGLe4ENCBcdbA",
+    formId: "12d4hrsqr2aural-L2zeeSEw_X4Jp37lKOk16GxPb86A",
     cover: "/cnc.png",
-    // document: "/HOPE 25 Project Expo Rules.pdf",
     limit: 30,
-    time: "9:00 AM - 12:00 PM",
+    time: "9:30 AM - 12:30 PM",
   },
 ];
 
