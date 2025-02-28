@@ -192,7 +192,6 @@ const events = [
     link: "https://forms.gle/xjYeAfPtMkwJgezQ9",
     formId: "1eysb_IUDJhUK275nnpDP4sY9mNdpfPbMELvbiELHsh8",
     time: "12:30 PM - 3:30 PM",
-
     venue: "ICFC Lab",
     document: "/Hope 25 Coding competition rules.pdf",
     prizes: {
@@ -220,7 +219,7 @@ const events = [
   {
     id: 12,
     title: "CNC Workshop",
-    description: "Showcase your innovative projects and win big prizes.",
+    description: "Learn the cutting edge tech of CNC.",
     type: "Workshop",
     fee: "50/-",
     teamSize: "Individual",
