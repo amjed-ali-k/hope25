@@ -205,7 +205,7 @@ const events = [
     title: "Project Expo",
     description: "Showcase your innovative projects and win big prizes.",
     type: "Competition",
-    fee: "150/-",
+    fee: "100/-",
     teamSize: "Upto 5 members",
     link: "https://forms.gle/KKRJ6XHDW1j1PKLK9",
     cover: "/expo.jpeg",
