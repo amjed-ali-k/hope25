@@ -83,6 +83,7 @@ const events = [
     teamSize: "Upto 2 members",
     document: "/Hope 25 Wire it up.pdf",
     time: "12:30 PM - 3:30 PM",
+    limit: 10,
     prizes: {
       first: "₹2000",
       second: "₹1000",
@@ -119,6 +120,7 @@ const events = [
     formId: "1ZCUEN0PlHygB_FGL1DQosIJNbtc0K2BIyH-fE6QxvIQ",
     document: "/Hope 25 Build a resistance.pdf",
     time: "9:00 AM - 12:00 PM",
+    limit: 15,
     prizes: {
       first: "₹750",
       second: "₹500",
