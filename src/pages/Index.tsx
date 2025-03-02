@@ -131,7 +131,7 @@ const events = [
     description: "Demonstrate your structural engineering skills.",
     type: "Mixed",
     fee: "50/-",
-    teamSize: "Upto 2 members",
+    teamSize: "2 members",
     venue: "Civil Lab",
     cover: "/cube.jpeg",
     link: "https://forms.gle/bVXVWQqhDBWfjMVj6",
@@ -210,6 +210,7 @@ const events = [
     link: "https://forms.gle/KKRJ6XHDW1j1PKLK9",
     cover: "/expo.jpeg",
     document: "/HOPE 25 Project Expo Rules.pdf",
+    formId: "11d3Y44HMPKL-XjsJaw49R5dkzkZNm-Ttjmz1ud09EMU",
     prizes: {
       first: "₹20000",
       second: "₹10000",
@@ -396,7 +397,15 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
 const FeaturedEvent = () => {
   // biome-ignore lint/style/noNonNullAssertion: <explanation>
   const projectExpo = events.find((event) => event.title === "Project Expo")!;
-
+  const { data, isLoading } = useSWR<{
+    formId: string;
+    responseCount: number;
+  }>(
+    projectExpo.formId
+      ? `https://techfest-backend.amjedmgm.workers.dev/form-responses/${projectExpo.formId}`
+      : null,
+    fetcher
+  );
   return (
     <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 mb-12">
       <div className="grid md:grid-cols-2 gap-6">
@@ -444,7 +453,14 @@ const FeaturedEvent = () => {
                 {projectExpo.teamSize}
               </span>
             </div>
-
+            <div className="flex items-center gap-2 text-sm">
+              <UserCheck className="h-4 w-4 text-muted-foreground" />
+              <span className="text-muted-foreground">
+                {isLoading
+                  ? "Loading..."
+                  : `${data?.responseCount} Registrations`}
+              </span>
+            </div>
             <div className="flex items-center gap-2">
               <Trophy className="h-5 w-5 self-end mb-1 text-yellow-500" />
               <div className="flex gap-3">
