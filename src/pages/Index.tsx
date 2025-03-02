@@ -160,7 +160,7 @@ const events = [
     formId: "1D0GDhnbmfMHHx_pD7eE8vUJVGB-UFeoXNN3w5tHUfWk",
     document: "/Hope 25 Autocad competition rules.pdf",
     time: "12:30 PM - 3:30 PM",
-
+    limit: 35,
     prizes: {
       first: "₹1500",
       second: "₹1000",
