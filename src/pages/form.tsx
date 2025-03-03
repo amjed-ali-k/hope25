@@ -56,6 +56,11 @@ export const FormPage = () => {
             Only {seatsLeft} seats left!
           </p>
         ) : null}
+        {!canShow && (
+          <p className="font-bold text-rose-600">
+            Seats are full! You cannot register anymore.
+          </p>
+        )}
         {canShow ? (
           <Button size="sm" variant="secondary" className="mt-4" asChild>
             <a href={event.link}>
