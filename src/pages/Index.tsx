@@ -13,10 +13,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import useSWR from "swr/immutable";
+import { Link } from "react-router-dom";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
-const events = [
+export const events = [
   {
     id: 1,
     title: "Line Follower",
@@ -234,16 +235,21 @@ const events = [
   },
 ];
 
-const EventCard = ({ event }: { event: (typeof events)[0] }) => {
+export const useResponses = (formId?: string | null) => {
   const { data, isLoading } = useSWR<{
     formId: string;
     responseCount: number;
   }>(
-    event.formId
-      ? `https://techfest-backend.amjedmgm.workers.dev/form-responses/${event.formId}`
+    formId
+      ? `https://techfest-backend.amjedmgm.workers.dev/form-responses/${formId}`
       : null,
     fetcher
   );
+  return { data, isLoading };
+};
+
+const EventCard = ({ event }: { event: (typeof events)[0] }) => {
+  const { data, isLoading } = useResponses(event.formId);
   const seatsLeft = event.limit
     ? event.limit - (data?.responseCount ?? 0)
     : null;
@@ -380,7 +386,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
                 className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
               >
                 <a
-                  href={event.link || "#"}
+                  href={`/form/${event.id}?title=${event.title}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -399,15 +405,8 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
 const FeaturedEvent = () => {
   // biome-ignore lint/style/noNonNullAssertion: <explanation>
   const projectExpo = events.find((event) => event.title === "Project Expo")!;
-  const { data, isLoading } = useSWR<{
-    formId: string;
-    responseCount: number;
-  }>(
-    projectExpo.formId
-      ? `https://techfest-backend.amjedmgm.workers.dev/form-responses/${projectExpo.formId}`
-      : null,
-    fetcher
-  );
+  const { data, isLoading } = useResponses(projectExpo.formId);
+
   return (
     <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 mb-12">
       <div className="grid md:grid-cols-2 gap-6">
@@ -502,7 +501,7 @@ const FeaturedEvent = () => {
               className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
             >
               <a
-                href={projectExpo.link || "#"}
+                href={`/form/${projectExpo.id}?title=${projectExpo.title}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
