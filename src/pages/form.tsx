@@ -20,7 +20,7 @@ export const FormPage = () => {
     if (canShow) {
       const timer = setTimeout(() => {
         window.location.href = event.link;
-      }, 1000);
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [event, canShow]);
