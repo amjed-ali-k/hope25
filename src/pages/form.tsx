@@ -56,7 +56,7 @@ export const FormPage = () => {
             Only {seatsLeft} seats left!
           </p>
         ) : null}
-        {!canShow && (
+        {!isLoading && !canShow && (
           <p className="font-bold text-rose-600">
             Seats are full! You cannot register anymore.
           </p>
