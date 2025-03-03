@@ -18,8 +18,8 @@ export const AllRoutes = () => {
       </Routes>
 
       <Monitoring
-        apiKey="BwexguVOBSqtm7G07aK5hgIk9VbUqeVM" // Safe to expose publically
-        url="https://monitoring.react-scan.com/api/v1/ingest"
+      apiKey="N0iegEMPkU6X0Yvc5OgekfctExoJUvJ6" // Safe to expose publically
+      url="https://monitoring.react-scan.com/api/v1/ingest"
         commit={import.meta.env.REACT_APP_VERCEL_GIT_COMMIT_SHA} // optional but recommended
         branch={import.meta.env.REACT_APP_VERCEL_GIT_COMMIT_REF} // optional but recommended
         params={params}
