@@ -181,7 +181,6 @@ export const events = [
     formId: "1-2xLgHXp0ukndm3we25R4lWaK9Vk3zWu1rv8HxMcK70",
     limit: 60,
     time: "9:00 AM - 12:00 PM",
-
     prizes: null,
   },
   {
@@ -230,7 +229,7 @@ export const events = [
     link: "https://forms.gle/859bcGLe4ENCBcdbA",
     formId: "12d4hrsqr2aural-L2zeeSEw_X4Jp37lKOk16GxPb86A",
     cover: "/cnc.png",
-    limit: 50,
+    limit: 60,
     time: "9:30 AM - 12:30 PM",
   },
 ];
