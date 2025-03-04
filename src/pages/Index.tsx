@@ -230,7 +230,7 @@ export const events = [
     link: "https://forms.gle/859bcGLe4ENCBcdbA",
     formId: "12d4hrsqr2aural-L2zeeSEw_X4Jp37lKOk16GxPb86A",
     cover: "/cnc.png",
-    limit: 30,
+    limit: 50,
     time: "9:30 AM - 12:30 PM",
   },
 ];
