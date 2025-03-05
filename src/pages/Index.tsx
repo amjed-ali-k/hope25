@@ -196,6 +196,7 @@ export const events = [
     formId: "1eysb_IUDJhUK275nnpDP4sY9mNdpfPbMELvbiELHsh8",
     time: "12:30 PM - 3:30 PM",
     venue: "ICFC Lab",
+    limit: 20,
     document: "/Hope 25 Coding competition rules.pdf",
     prizes: {
       first: "₹2000",
