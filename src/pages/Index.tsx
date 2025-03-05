@@ -142,7 +142,7 @@ export const events = [
     formId: "1dzewcqN0f4Nb4x-tQK5wGSEgJPNnABv64O0Q7gUnHq8",
     document: "/Hope 25 Concrete Mix and Cube design.pdf",
     limit: 16,
-    time: "9:00 AM - 12:00 PM",
+    time: "9:30 AM - 3:30 PM",
     prizes: {
       first: "₹1000",
       second: "₹500",
