@@ -66,6 +66,7 @@ export const events = [
     document: "/Hope 25 Auto Quiz.pdf",
     formId: "1wo2q0woRIkijDe_ja05m_5MmRRiNCLEWsS0lter1ais",
     time: "12:30 PM - 3:30 PM",
+    limit: 70,
     prizes: {
       first: "₹1500",
       second: "₹1000",
@@ -171,7 +172,7 @@ export const events = [
   {
     id: 9,
     title: "UI/UX Workshop",
-    description: "Learn modern UI/UX design principles and practices.",
+    description: "Ever wondered how apps like Instagram, WhatsApp, or games look so cool and easy to use? That’s UI/UX design! Join this workshop to learn how to create awesome designs.",
     type: "Workshop",
     fee: "50/-",
     teamSize: "Individual",
@@ -468,7 +469,7 @@ const FeaturedEvent = () => {
                   <span className="text-xs text-muted-foreground">
                     1st Prize
                   </span>
-                  <span className="prize-text font-bold text-xl">
+                  <span className="prize-text animate-pulse duration-[1500] font-bold text-xl">
                     {projectExpo.prizes?.first}
                   </span>
                 </div>
@@ -477,7 +478,7 @@ const FeaturedEvent = () => {
                   <span className="text-xs text-muted-foreground">
                     2nd Prize
                   </span>
-                  <span className="prize-text font-bold text-xl">
+                  <span className="prize-text animate-pulse duration-[2000] font-bold text-xl">
                     {projectExpo.prizes?.second}
                   </span>
                 </div>
@@ -486,7 +487,7 @@ const FeaturedEvent = () => {
                   <span className="text-xs text-muted-foreground">
                     3rd Prize
                   </span>
-                  <span className="prize-text font-bold text-xl">
+                  <span className="prize-text animate-pulse duration-[3000] font-bold text-xl">
                     {projectExpo.prizes?.third}
                   </span>
                 </div>
