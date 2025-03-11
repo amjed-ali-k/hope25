@@ -329,7 +329,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
               <Users className="h-4 w-4 text-muted-foreground" />
               <span className="text-muted-foreground">{event.teamSize}</span>
             </div>
-            {!event.limit && (
+            {/* {!event.limit && ( */}
               <div className="flex items-center gap-2 text-sm">
                 <UserCheck className="h-4 w-4 text-muted-foreground" />
                 <span className="text-muted-foreground">
@@ -338,7 +338,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
                     : `${data?.responseCount} Registrations`}
                 </span>
               </div>
-            )}
+            {/* )} */}
             {event.limit && (
               <div className="flex items-center gap-2 text-sm">
                 <RockingChair className="h-4 w-4 text-muted-foreground" />
@@ -383,7 +383,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
           </div>
           <div className="grow" />
           <div className="mt-6">
-            {event.link && showButton && (
+            {/* {event.link && showButton && (
               <Button
                 asChild
                 className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
@@ -394,10 +394,9 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
                   rel="noopener noreferrer"
                 >
                   Register Now
-                  {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" /> */}
                 </a>
               </Button>
-            )}
+            )} */}
           </div>
         </div>
       </div>
