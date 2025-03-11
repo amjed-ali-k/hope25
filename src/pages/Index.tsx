@@ -394,7 +394,7 @@ const EventCard = ({ event }: { event: (typeof events)[0] }) => {
                   rel="noopener noreferrer"
                 >
                   Register Now
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                  {/* <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" /> */}
                 </a>
               </Button>
             )}
@@ -499,14 +499,8 @@ const FeaturedEvent = () => {
           </div>
 
           <div className="mt-6">
-            <Button
-              asChild
-              className="group/button w-full bg-destructive hover:bg-destructive/80 text-destructive-foreground"
-            >
-              <a href={`#`} target="_blank" rel="noopener noreferrer">
-                Event Full{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
-              </a>
+            <Button className="group/button w-full bg-destructive hover:bg-destructive/80 text-destructive-foreground">
+              Event Full
             </Button>
           </div>
         </div>
