@@ -40,7 +40,8 @@ export const events = [
   {
     id: 9,
     title: "UI/UX Workshop",
-    description: "Ever wondered how apps like Instagram, WhatsApp, or games look so cool and easy to use? That’s UI/UX design! Join this workshop to learn how to create awesome designs.",
+    description:
+      "Ever wondered how apps like Instagram, WhatsApp, or games look so cool and easy to use? That’s UI/UX design! Join this workshop to learn how to create awesome designs.",
     type: "Workshop",
     fee: "50/-",
     teamSize: "Individual",
@@ -500,14 +501,10 @@ const FeaturedEvent = () => {
           <div className="mt-6">
             <Button
               asChild
-              className="group/button w-full bg-primary hover:bg-primary/80 text-primary-foreground"
+              className="group/button w-full bg-destructive hover:bg-destructive/80 text-destructive-foreground"
             >
-              <a
-                href={`/form/${projectExpo.id}?title=${projectExpo.title}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Register Now
+              <a href={`#`} target="_blank" rel="noopener noreferrer">
+                Event Full{" "}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
               </a>
             </Button>
